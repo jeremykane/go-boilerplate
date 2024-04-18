@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+  db:
+    image: postgres:15.2
+    volumes:
+      - ./postgres_data/psql:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: databasename
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    profiles:
+      - start-postgres
+      - start-components
+
+  redis-node:
+    image: redis:7.0.9
+    ports:
+      - "16379:6379"
+    profiles:
+      - start-redis
+      - start-components
+    environment:
+      - "ALLOW_EMPTY_PASSWORD=yes"

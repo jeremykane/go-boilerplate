@@ -1,0 +1,12 @@
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+vendor/
+.idea/
+.vscode/
+files/etc/docker/postgres_data/
+.DS_Store
+go-backend
+*.test

@@ -1,0 +1,6 @@
+%syntax-version=1.0.0
+%project=go-backend
+%uri=https://github.com/jeremykane/go-boilerplate
+
+1698972633_create_facility_types_table 2024-04-17T08:52:22Z Jeremy Kane <jeremykane1579@gmail.com> # Create facility types tables
+1698984344_create_location_types_table 2024-04-18T01:02:11Z Jeremy Kane <jeremykane1579@gmail.com> # create location types table

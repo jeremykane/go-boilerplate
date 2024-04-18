@@ -1,0 +1,53 @@
+definitions:
+  entity.FacilityType:
+    properties:
+      bahasaName:
+        type: string
+      createdAt:
+        type: string
+      id:
+        type: integer
+      name:
+        type: string
+      updatedAt:
+        type: string
+      uuid:
+        type: string
+    type: object
+  entity.GeneralAPIResponse:
+    properties:
+      data: {}
+      error:
+        $ref: '#/definitions/errorx.CustomError'
+    type: object
+  errorx.CustomError:
+    properties:
+      code:
+        type: string
+      message:
+        type: string
+    type: object
+info:
+  contact: {}
+paths:
+  /facilityTypes:
+    get:
+      consumes:
+      - '*/*'
+      description: get facility type order by id
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/entity.FacilityType'
+            type: array
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/entity.GeneralAPIResponse'
+      tags:
+      - '[GET] facility type'
+swagger: "2.0"
